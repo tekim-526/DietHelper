@@ -35,7 +35,8 @@ class CalendarView: BaseView {
     
     let calendar: FSCalendar = {
         let calendar = FSCalendar()
-        
+        calendar.appearance.eventDefaultColor = .lightGray
+        calendar.appearance.selectionColor = .lightGray
         return calendar
     }()
    

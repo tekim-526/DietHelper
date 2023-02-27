@@ -9,21 +9,24 @@ import UIKit
 
 import RxCocoa
 import RxSwift
+import FSCalendar
 
 class CalendarViewController: BaseViewController {
     let calendarView = CalendarView()
     let viewModel = CalendarViewModel()
+    
     override func loadView() {
         view = calendarView
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        calendarView.calendar.dataSource = self
+        calendarView.calendar.delegate = self
         let barButtonItem = UIBarButtonItem(title: "저장", style: .plain, target: self, action: nil)
         barButtonItem.isEnabled = false
         navigationItem.rightBarButtonItem = barButtonItem
         bind()
-        print("💡\n", viewModel.user.fetchData())
     }
     
     func bind() {
@@ -35,9 +38,8 @@ class CalendarViewController: BaseViewController {
         output.dataIsEmpty
             .withUnretained(self)
             .bind { vc, isempty in
-                print("⚙️ fetchDate\n", vc.viewModel.user.fetchDataThroughDate(date: Date())!)
-                guard let gained = vc.viewModel.user.fetchDataThroughDate(date: Date())?.gainedCalories else { return }
-                guard let consumed = vc.viewModel.user.fetchDataThroughDate(date: Date())?.consumedCalories else { return }
+                guard let gained = vc.viewModel.user.fetchDataThroughDate(date: vc.calendarView.calendar.selectedDate ?? Date())?.gainedCalories else { return }
+                guard let consumed = vc.viewModel.user.fetchDataThroughDate(date: vc.calendarView.calendar.selectedDate ?? Date())?.consumedCalories else { return }
                 vc.calendarView.gainedCaloriesTextField.text = "\(gained)"
                 vc.calendarView.consumedCaloriesTextField.text = "\(consumed)"
             }.disposed(by: viewModel.disposebag)
@@ -71,9 +73,27 @@ class CalendarViewController: BaseViewController {
             .bind { vc, _ in
                 guard let gained = Int(vc.calendarView.gainedCaloriesTextField.text!) else { return }
                 guard let consumed = Int(vc.calendarView.consumedCaloriesTextField.text!) else { return }
-                vc.viewModel.user.updateCalories(date: Date(), gainedCalories: gained, consumedCalories: consumed)
+                vc.viewModel.user.updateCalories(date: vc.calendarView.calendar.selectedDate ?? Date(), gainedCalories: gained, consumedCalories: consumed)
                 
             }.disposed(by: viewModel.disposebag)
     }
     
+}
+extension CalendarViewController: FSCalendarDelegate, FSCalendarDataSource {
+    func calendar(_ calendar: FSCalendar, numberOfEventsFor date: Date) -> Int {
+        var dateArr = [Date]()
+        for i in viewModel.user.fetchData() {
+            dateArr.append(i.date!)
+        }
+        if dateArr.contains(date) {
+            return 1
+        }
+        return 0
+    }
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        let consumed = viewModel.user.fetchDataThroughDate(date: date)?.consumedCalories ?? 0
+        let gained = viewModel.user.fetchDataThroughDate(date: date)?.gainedCalories ?? 0
+        calendarView.consumedCaloriesTextField.text = consumed == 0 ? "" : "\(consumed)"
+        calendarView.gainedCaloriesTextField.text = gained == 0 ? "" : "\(gained)"
+    }
 }

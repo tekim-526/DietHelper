@@ -74,10 +74,10 @@ public class User: NSManagedObject {
     
     func fetchDataThroughDate(date: Date) -> User? {
         let datas = fetchData()
-        let calendar = Calendar.current
+        guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else { return nil }
         do {
             for user in datas {
-                if calendar.isDateInToday(date) {
+                if user.date == date {
                     return user
                 }
             }
@@ -118,14 +118,20 @@ public class User: NSManagedObject {
     func updateCalories(date: Date, gainedCalories: Int, consumedCalories: Int) {
         guard let date = Calendar.current.date(from: Calendar.current.dateComponents([.year, .month, .day], from: date)) else { return }
         guard let appDelegate = UIApplication.shared.delegate as? AppDelegate else { return }
-        
+        let lastData = fetchData().last!
         let managedContext = appDelegate.persistentContainer.viewContext
         let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "User")
         fetchRequest.predicate = NSPredicate(format: "date = %@", date as NSDate)
-        
         do {
             let data = try managedContext.fetch(fetchRequest)
+            if data.isEmpty {
+                profile = Profile(age: Int(lastData.age), exerciseLevel: lastData.exerciseLevel, height: lastData.height, weight: lastData.weight, isMale: lastData.isMale, date: date, gainedCalories: gainedCalories , consumedCalories: consumedCalories)
+                return
+            }
+            
             let userByDate = data[0] as! NSManagedObject
+            
+            
             userByDate.setValue(consumedCalories, forKey: "consumedCalories")
             userByDate.setValue(gainedCalories, forKey: "gainedCalories")
             do {

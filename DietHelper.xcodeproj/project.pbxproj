@@ -9,6 +9,15 @@
 /* Begin PBXBuildFile section */
 		931A864E29A48A660039A0E0 /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 931A864D29A48A660039A0E0 /* FSCalendar */; };
 		931A865429A494220039A0E0 /* CalendarViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 931A865329A494220039A0E0 /* CalendarViewModel.swift */; };
+		932581E729AC73D2007A0587 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932581E629AC73D2007A0587 /* WidgetKit.framework */; };
+		932581E929AC73D2007A0587 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 932581E829AC73D2007A0587 /* SwiftUI.framework */; };
+		932581EC29AC73D2007A0587 /* Diet_TriggerBundle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932581EB29AC73D2007A0587 /* Diet_TriggerBundle.swift */; };
+		932581EE29AC73D2007A0587 /* Diet_TriggerLiveActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932581ED29AC73D2007A0587 /* Diet_TriggerLiveActivity.swift */; };
+		932581F029AC73D2007A0587 /* Diet_Trigger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 932581EF29AC73D2007A0587 /* Diet_Trigger.swift */; };
+		932581F329AC73D3007A0587 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 932581F229AC73D3007A0587 /* Assets.xcassets */; };
+		932581F529AC73D3007A0587 /* Diet_Trigger.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 932581F129AC73D2007A0587 /* Diet_Trigger.intentdefinition */; };
+		932581F629AC73D3007A0587 /* Diet_Trigger.intentdefinition in Sources */ = {isa = PBXBuildFile; fileRef = 932581F129AC73D2007A0587 /* Diet_Trigger.intentdefinition */; };
+		932581F929AC73D3007A0587 /* Diet TriggerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 932581E429AC73D2007A0587 /* Diet TriggerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9370EF2529A738E200970C0C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370EF2429A738E200970C0C /* SettingViewController.swift */; };
 		9370EF2729A738EE00970C0C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370EF2629A738EE00970C0C /* SettingView.swift */; };
 		93F698772988D42D00FB09E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F698762988D42D00FB09E9 /* AppDelegate.swift */; };
@@ -41,8 +50,41 @@
 		93F698C2298B914800FB09E9 /* BMRAMRButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F698C1298B914800FB09E9 /* BMRAMRButton.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		932581F729AC73D3007A0587 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 93F6986B2988D42D00FB09E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 932581E329AC73D2007A0587;
+			remoteInfo = "Diet TriggerExtension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		932581FA29AC73D3007A0587 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				932581F929AC73D3007A0587 /* Diet TriggerExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		931A865329A494220039A0E0 /* CalendarViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewModel.swift; sourceTree = "<group>"; };
+		932581E429AC73D2007A0587 /* Diet TriggerExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Diet TriggerExtension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		932581E629AC73D2007A0587 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		932581E829AC73D2007A0587 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		932581EB29AC73D2007A0587 /* Diet_TriggerBundle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet_TriggerBundle.swift; sourceTree = "<group>"; };
+		932581ED29AC73D2007A0587 /* Diet_TriggerLiveActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet_TriggerLiveActivity.swift; sourceTree = "<group>"; };
+		932581EF29AC73D2007A0587 /* Diet_Trigger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diet_Trigger.swift; sourceTree = "<group>"; };
+		932581F129AC73D2007A0587 /* Diet_Trigger.intentdefinition */ = {isa = PBXFileReference; lastKnownFileType = file.intentdefinition; path = Diet_Trigger.intentdefinition; sourceTree = "<group>"; };
+		932581F229AC73D3007A0587 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		932581F429AC73D3007A0587 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9370EF2429A738E200970C0C /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		9370EF2629A738EE00970C0C /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		93F698732988D42D00FB09E9 /* DietHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DietHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,6 +115,15 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		932581E129AC73D2007A0587 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932581E929AC73D2007A0587 /* SwiftUI.framework in Frameworks */,
+				932581E729AC73D2007A0587 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F698702988D42D00FB09E9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -130,6 +181,28 @@
 			path = Scenes;
 			sourceTree = "<group>";
 		};
+		932581E529AC73D2007A0587 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				932581E629AC73D2007A0587 /* WidgetKit.framework */,
+				932581E829AC73D2007A0587 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		932581EA29AC73D2007A0587 /* Diet Trigger */ = {
+			isa = PBXGroup;
+			children = (
+				932581EB29AC73D2007A0587 /* Diet_TriggerBundle.swift */,
+				932581ED29AC73D2007A0587 /* Diet_TriggerLiveActivity.swift */,
+				932581EF29AC73D2007A0587 /* Diet_Trigger.swift */,
+				932581F129AC73D2007A0587 /* Diet_Trigger.intentdefinition */,
+				932581F229AC73D3007A0587 /* Assets.xcassets */,
+				932581F429AC73D3007A0587 /* Info.plist */,
+			);
+			path = "Diet Trigger";
+			sourceTree = "<group>";
+		};
 		9370EF2329A738A400970C0C /* SettingScene */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				93F698752988D42D00FB09E9 /* DietHelper */,
+				932581EA29AC73D2007A0587 /* Diet Trigger */,
+				932581E529AC73D2007A0587 /* Frameworks */,
 				93F698742988D42D00FB09E9 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -151,6 +226,7 @@
 			isa = PBXGroup;
 			children = (
 				93F698732988D42D00FB09E9 /* DietHelper.app */,
+				932581E429AC73D2007A0587 /* Diet TriggerExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -222,6 +298,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		932581E329AC73D2007A0587 /* Diet TriggerExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 932581FD29AC73D3007A0587 /* Build configuration list for PBXNativeTarget "Diet TriggerExtension" */;
+			buildPhases = (
+				932581E029AC73D2007A0587 /* Sources */,
+				932581E129AC73D2007A0587 /* Frameworks */,
+				932581E229AC73D2007A0587 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Diet TriggerExtension";
+			productName = "Diet TriggerExtension";
+			productReference = 932581E429AC73D2007A0587 /* Diet TriggerExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		93F698722988D42D00FB09E9 /* DietHelper */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 93F698872988D42E00FB09E9 /* Build configuration list for PBXNativeTarget "DietHelper" */;
@@ -229,10 +322,12 @@
 				93F6986F2988D42D00FB09E9 /* Sources */,
 				93F698702988D42D00FB09E9 /* Frameworks */,
 				93F698712988D42D00FB09E9 /* Resources */,
+				932581FA29AC73D3007A0587 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				932581F829AC73D3007A0587 /* PBXTargetDependency */,
 			);
 			name = DietHelper;
 			packageProductDependencies = (
@@ -257,6 +352,9 @@
 				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1420;
 				TargetAttributes = {
+					932581E329AC73D2007A0587 = {
+						CreatedOnToolsVersion = 14.2;
+					};
 					93F698722988D42D00FB09E9 = {
 						CreatedOnToolsVersion = 14.2;
 					};
@@ -282,11 +380,20 @@
 			projectRoot = "";
 			targets = (
 				93F698722988D42D00FB09E9 /* DietHelper */,
+				932581E329AC73D2007A0587 /* Diet TriggerExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		932581E229AC73D2007A0587 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932581F329AC73D3007A0587 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F698712988D42D00FB09E9 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -300,6 +407,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		932581E029AC73D2007A0587 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				932581EC29AC73D2007A0587 /* Diet_TriggerBundle.swift in Sources */,
+				932581F029AC73D2007A0587 /* Diet_Trigger.swift in Sources */,
+				932581EE29AC73D2007A0587 /* Diet_TriggerLiveActivity.swift in Sources */,
+				932581F529AC73D3007A0587 /* Diet_Trigger.intentdefinition in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		93F6986F2988D42D00FB09E9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -327,10 +445,19 @@
 				93F698B9298A47B800FB09E9 /* User.xcdatamodeld in Sources */,
 				93F698A62988DD3200FB09E9 /* OnboardingTextField.swift in Sources */,
 				93F698A42988DC9E00FB09E9 /* OnboardingLabel.swift in Sources */,
+				932581F629AC73D3007A0587 /* Diet_Trigger.intentdefinition in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		932581F829AC73D3007A0587 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 932581E329AC73D2007A0587 /* Diet TriggerExtension */;
+			targetProxy = 932581F729AC73D3007A0587 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		93F6987C2988D42D00FB09E9 /* Main.storyboard */ = {
@@ -352,6 +479,60 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		932581FB29AC73D3007A0587 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQ63CT4A3G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Diet Trigger/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Diet Trigger";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tekim.DietHelper.Diet-Trigger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		932581FC29AC73D3007A0587 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = FQ63CT4A3G;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Diet Trigger/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Diet Trigger";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "tekim.DietHelper.Diet-Trigger";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 		93F698852988D42E00FB09E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -469,6 +650,7 @@
 		93F698882988D42E00FB09E9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -497,6 +679,7 @@
 		93F698892988D42E00FB09E9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
@@ -525,6 +708,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		932581FD29AC73D3007A0587 /* Build configuration list for PBXNativeTarget "Diet TriggerExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				932581FB29AC73D3007A0587 /* Debug */,
+				932581FC29AC73D3007A0587 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		93F6986E2988D42D00FB09E9 /* Build configuration list for PBXProject "DietHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
