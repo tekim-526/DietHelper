@@ -20,6 +20,7 @@
 		932581F929AC73D3007A0587 /* Diet TriggerExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 932581E429AC73D2007A0587 /* Diet TriggerExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		9370EF2529A738E200970C0C /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370EF2429A738E200970C0C /* SettingViewController.swift */; };
 		9370EF2729A738EE00970C0C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9370EF2629A738EE00970C0C /* SettingView.swift */; };
+		93D9266429AF1A80005BC6B1 /* IQKeyboardManagerSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 93D9266329AF1A80005BC6B1 /* IQKeyboardManagerSwift */; };
 		93F698772988D42D00FB09E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F698762988D42D00FB09E9 /* AppDelegate.swift */; };
 		93F698792988D42D00FB09E9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 93F698782988D42D00FB09E9 /* SceneDelegate.swift */; };
 		93F6987E2988D42D00FB09E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93F6987C2988D42D00FB09E9 /* Main.storyboard */; };
@@ -128,6 +129,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				93D9266429AF1A80005BC6B1 /* IQKeyboardManagerSwift in Frameworks */,
 				93F698AF2988F11A00FB09E9 /* RxCocoa in Frameworks */,
 				931A864E29A48A660039A0E0 /* FSCalendar in Frameworks */,
 				93F6989F2988D92900FB09E9 /* SnapKit in Frameworks */,
@@ -337,6 +339,7 @@
 				93F698B02988F11A00FB09E9 /* RxRelay */,
 				93F698B22988F11A00FB09E9 /* RxSwift */,
 				931A864D29A48A660039A0E0 /* FSCalendar */,
+				93D9266329AF1A80005BC6B1 /* IQKeyboardManagerSwift */,
 			);
 			productName = DietHelper;
 			productReference = 93F698732988D42D00FB09E9 /* DietHelper.app */;
@@ -374,6 +377,7 @@
 				93F698A72988E73300FB09E9 /* XCRemoteSwiftPackageReference "TextFieldEffects" */,
 				93F698AD2988F11A00FB09E9 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				931A864C29A48A660039A0E0 /* XCRemoteSwiftPackageReference "FSCalendar" */,
+				93D9266229AF1A80005BC6B1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 			);
 			productRefGroup = 93F698742988D42D00FB09E9 /* Products */;
 			projectDirPath = "";
@@ -746,6 +750,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		93D9266229AF1A80005BC6B1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.3.0;
+			};
+		};
 		93F6989D2988D92900FB09E9 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -777,6 +789,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 931A864C29A48A660039A0E0 /* XCRemoteSwiftPackageReference "FSCalendar" */;
 			productName = FSCalendar;
+		};
+		93D9266329AF1A80005BC6B1 /* IQKeyboardManagerSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 93D9266229AF1A80005BC6B1 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			productName = IQKeyboardManagerSwift;
 		};
 		93F6989E2988D92900FB09E9 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
