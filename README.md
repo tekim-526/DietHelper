@@ -116,3 +116,6 @@ func updateData(date: Date = Date(), age: Int64, weight: Double, height: Double,
     }
 }
 ```
+### ___회고___
+CoreData와 Input - Output 모델링을 활용한 MVVM, CoreData 및 WidgetKit을 사용해보았는데 새로운 기술에 익숙해지고 사용하는 경험은 너무 좋았다.
+
