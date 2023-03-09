@@ -117,5 +117,5 @@ func updateData(date: Date = Date(), age: Int64, weight: Double, height: Double,
 }
 ```
 ### ___회고___
-CoreData와 Input - Output 모델링을 활용한 MVVM, CoreData 및 WidgetKit을 사용해보았는데 새로운 기술에 익숙해지고 사용하는 경험은 너무 좋았다.
-
+Persistence한 데이터 저장을 CoreData를 활용했는데 CoreData의 다양한 기능 중 필요했던 기능이 데이터 저장 하나뿐이어서 Realm을 사용하는것이 데이터의 입출력에서 이점을 가질수있을 것 같다. 그리고CoreData에서 원하는 데이터를 업데이트하는 과정이 데이터를 생성하는 과정과 비슷하다고 느꼈는데 반복적으로 쓰이는 코드들을 줄일 수 있었을 것 같다.  
+또한 날짜를 다루는 부분에서 **Calendar.current.dateComponents([.year, .month, .day], from: date)**를 자주 사용했는데 따로 변수나 상수등으로 빼서 전역적으로 사용했다면 더 좋았을것 같다. 
